@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 const TabSpan = styled.span`
 margin-right: 5px;
@@ -25,5 +26,9 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  name: PropTypes.isRequired
+}
+
 
 export default Tab;

@@ -7,17 +7,16 @@ margin-right: 5px;
 `
 
 const Tab = props => {
-
-
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
 
-
+  console.log(props)
+  let classSelector = (props.tab === props.selectTab)
   return (
     <div
       name={props.tab}
-      className={''}
+      className={`tab${classSelector ? " active-tab" : ""}`}
       onClick={props.selectTabHandler}
     >
       <TabSpan name={props.tab}>{props.tab.toUpperCase()}</TabSpan>
@@ -27,7 +26,7 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 Tab.propTypes = {
-  name: PropTypes.isRequired
+  tab: PropTypes.string.isRequired
 }
 
 

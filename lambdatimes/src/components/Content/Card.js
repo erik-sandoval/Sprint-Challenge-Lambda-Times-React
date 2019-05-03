@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = props => {
-  
   return (
     <div className="card">
       <div className="headline">{props.card.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={props.card.img} />
+          <img src={props.card.img} alt="good boy" />
         </div>
         <span>By {props.card.author}</span>
       </div>
@@ -18,9 +17,9 @@ const Card = props => {
 
 // Make sure to include PropTypes.
 Card.propTypes = {
-  item: PropTypes.shape({
-    headlines: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired
+  card: PropTypes.shape({
+    headline: PropTypes.string,
+    author: PropTypes.string
   })
 }
 

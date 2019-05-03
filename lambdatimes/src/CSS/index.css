@@ -120,6 +120,7 @@ body {
 .top-bar .container .container-right span {
   cursor: pointer;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
